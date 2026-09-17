@@ -1,128 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LIANO Marketplace</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIANO Marketplace</title>
 
-    body {
-      background: #f5f5f5;
-      color: #222;
-    }
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
 
-    header {
-      background: #111;
-      color: white;
-      padding: 22px 18px;
-    }
+body{
+font-family:Arial,sans-serif;
+background:#f5f6f8;
+color:#222;
+}
 
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
+header{
+background:#111;
+color:white;
+padding:18px 16px;
+}
 
-    .tagline {
-      margin-top: 6px;
-      font-size: 14px;
-      color: #ddd;
-    }
+.logo{
+font-size:28px;
+font-weight:bold;
+letter-spacing:2px;
+}
 
-    .container {
-      padding: 20px 16px;
-      max-width: 900px;
-      margin: auto;
-    }
+.tagline{
+margin-top:6px;
+color:#ccc;
+font-size:14px;
+}
 
-    .search {
-      width: 100%;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px 16px;
+}
 
-    h2 {
-      margin-bottom: 14px;
-    }
+.hero{
+background:#111;
+color:white;
+padding:28px 20px;
+border-radius:16px;
+margin-bottom:20px;
+}
 
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
+.hero h1{
+font-size:30px;
+margin-bottom:10px;
+}
 
-    .category {
-      background: white;
-      padding: 22px 10px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      font-weight: bold;
-    }
+.hero p{
+color:#ddd;
+line-height:1.6;
+margin-bottom:18px;
+}
 
-    .welcome {
-      background: white;
-      padding: 22px;
-      border-radius: 12px;
-      margin-top: 24px;
-      line-height: 1.6;
-    }
+.search{
+width:100%;
+padding:15px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:16px;
+margin-bottom:22px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px 15px;
-      color: #777;
-      font-size: 13px;
-    }
-  </style>
+h2{
+margin-bottom:14px;
+}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-bottom:25px;
+}
+
+.category{
+background:white;
+padding:20px 10px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+font-weight:bold;
+}
+
+.category span{
+display:block;
+font-size:28px;
+margin-bottom:8px;
+}
+
+.welcome{
+background:white;
+padding:22px;
+border-radius:12px;
+margin-bottom:24px;
+line-height:1.6;
+box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+.buttons{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:15px;
+}
+
+button{
+border:0;
+padding:13px 18px;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.primary{
+background:#111;
+color:white;
+}
+
+.secondary{
+background:#eee;
+color:#111;
+}
+
+footer{
+background:#111;
+color:#ccc;
+text-align:center;
+padding:25px 15px;
+margin-top:30px;
+font-size:14px;
+line-height:1.6;
+}
+
+@media(min-width:700px){
+.categories{
+grid-template-columns:repeat(4,1fr);
+}
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">LIANO</div>
-    <div class="tagline">Buy. Sell. Hire. Connect.</div>
-  </header>
+<header>
+<div class="logo">LIANO</div>
+<div class="tagline">Marketplace • Buy • Sell • Connect</div>
+</header>
 
-  <main class="container">
+<main class="container">
 
-    <input
-      type="text"
-      class="search"
-      placeholder="What are you looking for?"
-    >
+<section class="hero">
+<h1>Welcome to LIANO Marketplace</h1>
+<p>
+Discover products from trusted sellers and connect with reliable service providers.
+LIANO is being built in Cameroon for customers, sellers and service providers across Africa.
+</p>
 
-    <h2>Explore LIANO</h2>
+<input class="search" type="search"
+placeholder="Search products, sellers or services...">
 
-    <div class="categories">
-      <div class="category">🛍️ Products</div>
-      <div class="category">🛠️ Services</div>
-      <div class="category">🏪 Sellers</div>
-      <div class="category">👤 Service Providers</div>
-    </div>
+<div class="buttons">
+<button class="primary">Browse Marketplace</button>
+<button class="secondary">Become a Seller</button>
+</div>
+</section>
 
-    <div class="welcome">
-      <h2>Welcome to LIANO</h2>
-      <p>
-        Discover products, find trusted sellers, and connect with people
-        offering useful services — all in one marketplace.
-      </p>
-    </div>
+<h2>Explore Categories</h2>
 
-  </main>
+<section class="categories">
 
-  <footer>
-    © 2026 LIANO Marketplace
-  </footer>
+<div class="category">
+<span>👟</span>
+Footwear
+</div>
+
+<div class="category">
+<span>👜</span>
+Fashion
+</div>
+
+<div class="category">
+<span>📱</span>
+Electronics
+</div>
+
+<div class="category">
+<span>💄</span>
+Beauty
+</div>
+
+<div class="category">
+<span>🏠</span>
+Home
+</div>
+
+<div class="category">
+<span>🛠️</span>
+Services
+</div>
+
+<div class="category">
+<span>🚗</span>
+Vehicles
+</div>
+
+<div class="category">
+<span>📦</span>
+More Products
+</div>
+
+</section>
+
+<section class="welcome">
+
+<h2>Why LIANO?</h2>
+
+<p>
+LIANO Marketplace connects buyers with sellers and customers with service providers
+in one simple platform.
+</p>
+
+<p>
+Our goal is to make buying, selling and finding services easier, safer and more convenient.
+</p>
+
+<div class="buttons">
+<button class="primary">Find Products</button>
+<button class="secondary">Find Services</button>
+</div>
+
+</section>
+
+<section class="welcome">
+
+<h2>For Sellers & Service Providers</h2>
+
+<p>
+Create your presence on LIANO, showcase what you offer and reach customers looking
+for your products or services.
+</p>
+
+<div class="buttons">
+<button class="primary">Join LIANO</button>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<strong>LIANO Marketplace</strong><br>
+Connecting buyers, sellers and service providers.<br><br>
+Built in Cameroon • Growing across Africa
+</footer>
 
 </body>
 </html>
