@@ -3,143 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LIANO Marketplace</title>
+
+<title>Liano Marketplace</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-font-family:Arial,sans-serif;
-background:#f5f6f8;
-color:#222;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-header{
-background:#111;
-color:white;
-padding:18px 16px;
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
 }
 
-.logo{
-font-size:28px;
-font-weight:bold;
-letter-spacing:2px;
+/* HEADER */
+header {
+  background: #111;
+  color: white;
+  padding: 18px 20px;
+  text-align: center;
 }
 
-.tagline{
-margin-top:6px;
-color:#ccc;
-font-size:14px;
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:20px 16px;
+.tagline {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #ddd;
 }
 
-.hero{
-background:#111;
-color:white;
-padding:28px 20px;
-border-radius:16px;
-margin-bottom:20px;
+/* NAVIGATION */
+nav {
+  background: white;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.hero h1{
-font-size:30px;
-margin-bottom:10px;
+nav button {
+  border: none;
+  background: #111;
+  color: white;
+  padding: 10px 16px;
+  margin: 4px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-.hero p{
-color:#ddd;
-line-height:1.6;
-margin-bottom:18px;
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #111, #444);
+  color: white;
+  padding: 45px 20px;
+  text-align: center;
 }
 
-.search{
-width:100%;
-padding:15px;
-border:1px solid #ddd;
-border-radius:10px;
-font-size:16px;
-margin-bottom:22px;
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
 }
 
-h2{
-margin-bottom:14px;
+.hero p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.categories{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-margin-bottom:25px;
+.hero-button {
+  display: inline-block;
+  background: white;
+  color: #111;
+  padding: 13px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.category{
-background:white;
-padding:20px 10px;
-border-radius:12px;
-text-align:center;
-box-shadow:0 2px 8px rgba(0,0,0,.08);
-font-weight:bold;
+/* SEARCH */
+.search-box {
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 0 15px;
 }
 
-.category span{
-display:block;
-font-size:28px;
-margin-bottom:8px;
+.search-box input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
-.welcome{
-background:white;
-padding:22px;
-border-radius:12px;
-margin-bottom:24px;
-line-height:1.6;
-box-shadow:0 2px 8px rgba(0,0,0,.06);
+/* PRODUCTS */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
 }
 
-.buttons{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-margin-top:15px;
+.section-title {
+  text-align: center;
+  margin: 25px 0;
+  font-size: 25px;
 }
 
-button{
-border:0;
-padding:13px 18px;
-border-radius:8px;
-font-weight:bold;
-cursor:pointer;
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-.primary{
-background:#111;
-color:white;
+.product {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  transition: 0.2s;
 }
 
-.secondary{
-background:#eee;
-color:#111;
+.product:hover {
+  transform: translateY(-4px);
 }
 
-footer{
-background:#111;
-color:#ccc;
-text-align:center;
-padding:25px 15px;
-margin-top:30px;
-font-size:14px;
-line-height:1.6;
+.product img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  background: #eee;
 }
 
-@media(min-width:700px){
-.categories{
-grid-template-columns:repeat(4,1fr);
+.product-info {
+  padding: 16px;
 }
+
+.product-info h3 {
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.details {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.whatsapp {
+  display: block;
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* INFO SECTION */
+.info {
+  background: white;
+  margin-top: 35px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.info h2 {
+  margin-bottom: 15px;
+}
+
+.info p {
+  line-height: 1.7;
+  color: #555;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 7px 0;
+}
+
+/* MOBILE */
+@media(max-width:600px) {
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .product img {
+    height: 170px;
+  }
+
+  .product-info {
+    padding: 11px;
+  }
+
+  .product-info h3 {
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 17px;
+  }
+
+  .details {
+    font-size: 12px;
+  }
+
+  .whatsapp {
+    font-size: 12px;
+    padding: 10px 5px;
+  }
 }
 </style>
 </head>
@@ -147,116 +243,262 @@ grid-template-columns:repeat(4,1fr);
 <body>
 
 <header>
-<div class="logo">LIANO</div>
-<div class="tagline">Marketplace • Buy • Sell • Connect</div>
+  <div class="logo">LIANO MARKETPLACE</div>
+  <div class="tagline">
+    Footwear • Skincare • School Essentials
+  </div>
 </header>
+
+<nav>
+  <button onclick="filterProducts('all')">All</button>
+  <button onclick="filterProducts('footwear')">Footwear</button>
+  <button onclick="filterProducts('skincare')">Skincare</button>
+  <button onclick="filterProducts('bags')">School Bags</button>
+</nav>
+
+<section class="hero">
+
+  <h1>Welcome to Liano Marketplace</h1>
+
+  <p>
+    Quality products for your everyday needs.
+    Shop wholesale and retail with ease.
+  </p>
+
+  <a href="#products" class="hero-button">
+    SHOP NOW
+  </a>
+
+</section>
+
+<div class="search-box">
+  <input
+    type="text"
+    id="search"
+    placeholder="Search for a product..."
+    onkeyup="searchProducts()"
+  >
+</div>
 
 <main class="container">
 
-<section class="hero">
-<h1>Welcome to LIANO Marketplace</h1>
-<p>
-Discover products from trusted sellers and connect with reliable service providers.
-LIANO is being built in Cameroon for customers, sellers and service providers across Africa.
-</p>
+<h2 class="section-title" id="products">
+  Featured Products
+</h2>
 
-<input class="search" type="search"
-placeholder="Search products, sellers or services...">
+<div class="products">
 
-<div class="buttons">
-<button class="primary">Browse Marketplace</button>
-<button class="secondary">Become a Seller</button>
-</div>
-</section>
+<!-- PRODUCT 1 -->
+<div class="product" data-category="footwear">
 
-<h2>Explore Categories</h2>
+  <img
+    src="https://via.placeholder.com/500x500?text=Liano+Shoe"
+    alt="Liano Shoe"
+  >
 
-<section class="categories">
+  <div class="product-info">
 
-<div class="category">
-<span>👟</span>
-Footwear
-</div>
+    <h3>Classic Men's Shoe</h3>
 
-<div class="category">
-<span>👜</span>
-Fashion
-</div>
+    <div class="price">
+      4,600 FCFA
+    </div>
 
-<div class="category">
-<span>📱</span>
-Electronics
-</div>
+    <div class="details">
+      Sizes: 38 - 45
+    </div>
 
-<div class="category">
-<span>💄</span>
-Beauty
+    <a
+      class="whatsapp"
+      href="https://wa.me/237670683080?text=Hello%20Liano%2C%20I%20am%20interested%20in%20the%20Classic%20Men's%20Shoe."
+      target="_blank"
+    >
+      ORDER ON WHATSAPP
+    </a>
+
+  </div>
 </div>
 
-<div class="category">
-<span>🏠</span>
-Home
+
+<!-- PRODUCT 2 -->
+<div class="product" data-category="footwear">
+
+  <img
+    src="https://via.placeholder.com/500x500?text=Liano+Footwear"
+    alt="Liano Footwear"
+  >
+
+  <div class="product-info">
+
+    <h3>Classic Ladies Shoe</h3>
+
+    <div class="price">
+      2,500 FCFA
+    </div>
+
+    <div class="details">
+      Sizes: 37 - 42
+    </div>
+
+    <a
+      class="whatsapp"
+      href="https://wa.me/237670683080?text=Hello%20Liano%2C%20I%20am%20interested%20in%20the%20Classic%20Ladies%20Shoe."
+      target="_blank"
+    >
+      ORDER ON WHATSAPP
+    </a>
+
+  </div>
 </div>
 
-<div class="category">
-<span>🛠️</span>
-Services
+
+<!-- PRODUCT 3 -->
+<div class="product" data-category="skincare">
+
+  <img
+    src="https://via.placeholder.com/500x500?text=Liano+Skincare"
+    alt="Liano Skincare"
+  >
+
+  <div class="product-info">
+
+    <h3>Skincare Products</h3>
+
+    <div class="price">
+      Contact us
+    </div>
+
+    <div class="details">
+      Wholesale & Retail
+    </div>
+
+    <a
+      class="whatsapp"
+      href="https://wa.me/237670683080?text=Hello%20Liano%2C%20I%20want%20to%20know%20more%20about%20your%20skincare%20products."
+      target="_blank"
+    >
+      ORDER ON WHATSAPP
+    </a>
+
+  </div>
 </div>
 
-<div class="category">
-<span>🚗</span>
-Vehicles
+
+<!-- PRODUCT 4 -->
+<div class="product" data-category="bags">
+
+  <img
+    src="https://via.placeholder.com/500x500?text=School+Bag"
+    alt="School Bag"
+  >
+
+  <div class="product-info">
+
+    <h3>School Bags</h3>
+
+    <div class="price">
+      Contact us
+    </div>
+
+    <div class="details">
+      Different colors available
+    </div>
+
+    <a
+      class="whatsapp"
+      href="https://wa.me/237670683080?text=Hello%20Liano%2C%20I%20want%20to%20know%20more%20about%20your%20school%20bags."
+      target="_blank"
+    >
+      ORDER ON WHATSAPP
+    </a>
+
+  </div>
 </div>
 
-<div class="category">
-<span>📦</span>
-More Products
 </div>
-
-</section>
-
-<section class="welcome">
-
-<h2>Why LIANO?</h2>
-
-<p>
-LIANO Marketplace connects buyers with sellers and customers with service providers
-in one simple platform.
-</p>
-
-<p>
-Our goal is to make buying, selling and finding services easier, safer and more convenient.
-</p>
-
-<div class="buttons">
-<button class="primary">Find Products</button>
-<button class="secondary">Find Services</button>
-</div>
-
-</section>
-
-<section class="welcome">
-
-<h2>For Sellers & Service Providers</h2>
-
-<p>
-Create your presence on LIANO, showcase what you offer and reach customers looking
-for your products or services.
-</p>
-
-<div class="buttons">
-<button class="primary">Join LIANO</button>
-</div>
-
-</section>
-
 </main>
 
+
+<section class="info">
+
+<h2>Why Shop With Liano?</h2>
+
+<p>
+Quality products • Wholesale & Retail •
+Affordable prices • Delivery available
+</p>
+
+</section>
+
+
 <footer>
-<strong>LIANO Marketplace</strong><br>
-Connecting buyers, sellers and service providers.<br><br>
-Built in Cameroon • Growing across Africa
+
+<p><strong>LIANO MARKETPLACE</strong></p>
+
+<p>Wholesale & Retail</p>
+
+<p>For orders and enquiries, contact us on WhatsApp.</p>
+
+<p>© 2026 Liano Marketplace</p>
+
 </footer>
+
+
+<script>
+
+function filterProducts(category) {
+
+  const products =
+    document.querySelectorAll(".product");
+
+  products.forEach(function(product) {
+
+    if (
+      category === "all" ||
+      product.dataset.category === category
+    ) {
+
+      product.style.display = "block";
+
+    } else {
+
+      product.style.display = "none";
+
+    }
+
+  });
+
+}
+
+
+function searchProducts() {
+
+  const search =
+    document.getElementById("search").value.toLowerCase();
+
+  const products =
+    document.querySelectorAll(".product");
+
+  products.forEach(function(product) {
+
+    const name =
+      product.innerText.toLowerCase();
+
+    if (name.includes(search)) {
+
+      product.style.display = "block";
+
+    } else {
+
+      product.style.display = "none";
+
+    }
+
+  });
+
+}
+
+</script>
 
 </body>
 </html>
